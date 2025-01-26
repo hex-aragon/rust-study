@@ -172,5 +172,15 @@ fn main() {
             Ok(a / b)
          }
    }
+
+   fn find_char(s: &str, c: char) -> Option<usize> {
+    for (i, ch) in s.chars().enumerate() {
+        if ch == c {
+            return Some(i)
+        }
+    }
+    None 
+    
+   }
    
 }
