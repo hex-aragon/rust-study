@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_51_hashMap_btreeMap"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
