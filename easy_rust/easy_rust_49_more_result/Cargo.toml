@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_49_more_result"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
