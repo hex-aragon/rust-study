@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_53_hashmap_Entry_Method"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
