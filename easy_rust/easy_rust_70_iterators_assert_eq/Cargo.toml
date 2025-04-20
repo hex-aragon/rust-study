@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_70_iterators_assert_eq"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
