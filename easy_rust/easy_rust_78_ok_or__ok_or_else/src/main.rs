@@ -64,8 +64,20 @@ fn main() {
             }))
         });
 
-    println!("{results_vec:?}");
+    println!("results_vec is {results_vec:?}");
 
+    let mut results_vec1 = vec![];
+    company_vec
+        .iter()
+        .for_each(|company| {
+            results_vec1.push(company.get_ceo().ok_or_else(|| {
+                let err_message = format!("No CEO found for {}", company.name);
+                println!("{err_message}");
+                err_message
+            }))
+        });
+    
+    println!("results_vec1 is {results_vec1:?}");
 
     let company_vec2 = vec![
         Company::new("Umbrella Corporation", "Unknown"),
