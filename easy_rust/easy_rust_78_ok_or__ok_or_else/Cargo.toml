@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_78_ok_or__ok_or_else"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

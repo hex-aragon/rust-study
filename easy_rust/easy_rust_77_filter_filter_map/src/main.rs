@@ -72,5 +72,5 @@ fn main() {
     assert_eq!(iter.next(), Some(1));
     assert_eq!(iter.next(), Some(5));
     assert_eq!(iter.next(), None);
-
+    
 }
