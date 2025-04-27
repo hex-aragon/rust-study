@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_93_interior_mutability_cell"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
