@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_119_cow_practive"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
