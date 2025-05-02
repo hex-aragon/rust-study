@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_124_builder_pattern2"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
