@@ -1,3 +1,13 @@
+// 사용하지 않는 코드에 대한 경고를 무시
+#![allow(dead_code)]
+
+// Clippy 경고 설정
+#![warn(
+    //clippy::pedantic,  // 매우 엄격한 검사
+    //clippy::nursery,   // 실험적인 검사
+    clippy::cargo,      // Cargo 관련 검사
+)]
+
 // 허용되는 문자들을 정의하는 상수: 숫자(0-9), 더하기(+), 빼기(-), 공백만 허용
 const OKAY_CHARACTERS: &str = "1234567890+- ";
 
@@ -5,11 +15,13 @@ const OKAY_CHARACTERS: &str = "1234567890+- ";
 // input: &str - 계산할 수학 표현식 문자열
 // 반환값: i32 - 계산 결과
 fn math(input: &str) -> i32 {
-    // 입력 문자열의 모든 문자가 OKAY_CHARACTERS에 포함되어 있는지 검사
-    // 허용되지 않은 문자가 있으면 panic 발생
+    // 입력 검증:
+    // 1. 모든 문자가 OKAY_CHARACTERS에 포함되어 있는지 검사
+    // 2. 처음 두 문자 중 하나 이상이 숫자인지 검사
     if !input
         .chars()
-        .all(|character| OKAY_CHARACTERS.contains(character))
+        .all(|character| OKAY_CHARACTERS.contains(character)) ||
+        !input.chars().take(2).any(|character| character.is_numeric())
     {
         panic!("Please only input numbers, +-, or spaces");
     }
@@ -75,10 +87,10 @@ fn math(input: &str) -> i32 {
     // 계산을 위한 변수 초기화
     let mut total = 0; // 총합을 저장하는 변수
     let mut adds = true; // 현재 연산이 더하기인지 빼기인지 나타내는 플래그
-    let mut math_iter = result_vec.into_iter(); // 결과 벡터를 순회하는 이터레이터
+    let math_iter = result_vec.into_iter(); // 결과 벡터를 순회하는 이터레이터
 
     // 이터레이터를 사용하여 각 항목을 처리
-    while let Some(entry) = math_iter.next() {
+    for entry in math_iter {
         if entry.contains('-') {
             // 마이너스 기호가 포함된 항목 처리
             if entry.chars().count() % 2 == 1 {
@@ -94,7 +106,7 @@ fn math(input: &str) -> i32 {
             }
         }
         // 숫자 처리
-        if adds == true {
+        if adds {
             total += entry.parse::<i32>().unwrap(); // 더하기
         } else {
             total -= entry.parse::<i32>().unwrap(); // 빼기
@@ -103,17 +115,12 @@ fn math(input: &str) -> i32 {
     total // 최종 계산 결과 반환
 }
 
-// .filter "7 + 9 + 10" -> "7+9+10"
-// 7 + 9 + 10+++++++++++++++++++++++-------------
-
-
 fn main() {
     // 테스트 실행
-    let my_number = math("7 + 9 + 10  ++++++++");
+    let my_number = math("7 + 9 + 10 ++++");
 }
 
-
-
+// 테스트 모듈
 #[cfg(test)]
 mod tests {
     use super::math; // 상위 모듈의 math 함수 사용
@@ -126,20 +133,20 @@ mod tests {
 
     // 1 - 2 = -1 테스트
     #[test]
-    fn one_minus_two_is_minus_one(){
+    fn one_minus_two_is_minus_one() {
         assert_eq!(math("1 - 2"), -1);
     }
 
     // 1 - (-1) = 2 테스트
     #[test]
-    fn one_minus_minus_one_is_two(){
+    fn one_minus_minus_one_is_two() {
         assert_eq!(math("1 - - 1"), 2);
     }
 
     // 잘못된 문자 입력 시 panic 발생 테스트
     #[test]
     #[should_panic]
-    fn panics_when_characters_not_right(){
+    fn panics_when_characters_not_right() {
         math("7 + please add seven");
     }
 }

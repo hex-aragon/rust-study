@@ -1,0 +1,6 @@
+[package]
+name = "easy_rust_129_clippy_again"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
