@@ -2,7 +2,7 @@
 
 //use std::ops::Add;
 
-const OKAY_CHARACTERS: &str = "123456789+- ";
+const OKAY_CHARACTERS: &str = "1234567890+- ";
 
 fn math(input: &str) -> i32 {
     if !input.chars().all(|character| OKAY_CHARACTERS.contains(character)){
