@@ -63,4 +63,36 @@ fn main() {
             _ => unreachable!(),
         }
     }
+
+
+    googoodan();
+    googoodan2();
+}
+
+fn googoodan() {
+    let mut flag = false;
+    for i in 1..=9 {
+        for j in 1..=9 {
+            if i * j == 56 {
+                flag = true;
+                println!("googoodan");
+                //56이 포함되는 것을 확인했으므로 바깥쪽 반복문까지 한 번에 탈출하고 시ㅍ음
+                break;
+            }
+        }
+    }
+}
+
+fn googoodan2() {
+    let mut flag = false;
+    'outer: for i in 1..=9 {
+        for j in 1..=9 {
+            if i * j == 56 {
+                flag = true;
+                //'outer 바깥으로 탈출
+                println!("googoodan2");
+                break 'outer;
+            }
+        }
+    }
 }
