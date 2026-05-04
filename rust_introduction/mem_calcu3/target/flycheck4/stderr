@@ -1,0 +1,55 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   0.073461792s  INFO prepare_target{force=false package_id=mem_calcu3 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3) target="mem_calcu3"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu3 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3)/Check { test: false }/TargetInner { name: "mem_calcu3", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3/src/main.rs", Edition2024) }
+   0.073493542s  INFO prepare_target{force=false package_id=mem_calcu3 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3) target="mem_calcu3"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3/target/debug/.fingerprint/mem_calcu3-f78409bcc28e47d2/bin-mem_calcu3`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.088295458s  INFO prepare_target{force=false package_id=mem_calcu3 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3) target="mem_calcu3"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu3 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3)/Check { test: true }/TargetInner { name: "mem_calcu3", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3/src/main.rs", Edition2024) }
+   0.088303833s  INFO prepare_target{force=false package_id=mem_calcu3 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3) target="mem_calcu3"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3/target/debug/.fingerprint/mem_calcu3-3eec5532e10f9f3a/test-bin-mem_calcu3`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking mem_calcu3 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu3)
+error: could not compile `mem_calcu3` (bin "mem_calcu3") due to 11 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `mem_calcu3` (bin "mem_calcu3" test) due to 11 previous errors
