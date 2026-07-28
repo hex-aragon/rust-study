@@ -1,9 +1,5 @@
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-   0.074289917s  INFO prepare_target{force=false package_id=mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2) target="mem_calcu2"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2)/Check { test: false }/TargetInner { name: "mem_calcu2", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2/src/main.rs", Edition2024) }
-   0.074304000s  INFO prepare_target{force=false package_id=mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2) target="mem_calcu2"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2/target/debug/.fingerprint/mem_calcu2-4a29814ef5e4d309/bin-mem_calcu2`
+   0.006887458s  INFO prepare_target{force=false package_id=mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2) target="mem_calcu2"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2)/Check { test: false }/TargetInner { name: "mem_calcu2", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2/src/main.rs", Edition2024) }
+   0.006909250s  INFO prepare_target{force=false package_id=mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2) target="mem_calcu2"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2/target/debug/.fingerprint/mem_calcu2-4a29814ef5e4d309/bin-mem_calcu2`
 
 Caused by:
     No such file or directory (os error 2)
@@ -26,8 +22,8 @@ Stack backtrace:
   14: std::rt::lang_start::<()>::{closure#0}
   15: std::rt::lang_start_internal
   16: _main
-   0.088467500s  INFO prepare_target{force=false package_id=mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2) target="mem_calcu2"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2)/Check { test: true }/TargetInner { name: "mem_calcu2", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2/src/main.rs", Edition2024) }
-   0.088473875s  INFO prepare_target{force=false package_id=mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2) target="mem_calcu2"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2/target/debug/.fingerprint/mem_calcu2-b61fa9ef13aee198/test-bin-mem_calcu2`
+   0.011642708s  INFO prepare_target{force=false package_id=mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2) target="mem_calcu2"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2)/Check { test: true }/TargetInner { name: "mem_calcu2", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2/src/main.rs", Edition2024) }
+   0.011660417s  INFO prepare_target{force=false package_id=mem_calcu2 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2) target="mem_calcu2"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu2/target/debug/.fingerprint/mem_calcu2-b61fa9ef13aee198/test-bin-mem_calcu2`
 
 Caused by:
     No such file or directory (os error 2)

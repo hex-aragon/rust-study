@@ -1,9 +1,5 @@
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-   0.073736875s  INFO prepare_target{force=false package_id=mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4) target="mem_calcu4"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4)/Check { test: false }/TargetInner { name: "mem_calcu4", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4/src/main.rs", Edition2024) }
-   0.073746625s  INFO prepare_target{force=false package_id=mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4) target="mem_calcu4"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4/target/debug/.fingerprint/mem_calcu4-2d86e6f978ba8edd/bin-mem_calcu4`
+   0.009176292s  INFO prepare_target{force=false package_id=mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4) target="mem_calcu4"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4)/Check { test: false }/TargetInner { name: "mem_calcu4", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4/src/main.rs", Edition2024) }
+   0.009232083s  INFO prepare_target{force=false package_id=mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4) target="mem_calcu4"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4/target/debug/.fingerprint/mem_calcu4-2d86e6f978ba8edd/bin-mem_calcu4`
 
 Caused by:
     No such file or directory (os error 2)
@@ -26,8 +22,8 @@ Stack backtrace:
   14: std::rt::lang_start::<()>::{closure#0}
   15: std::rt::lang_start_internal
   16: _main
-   0.088354000s  INFO prepare_target{force=false package_id=mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4) target="mem_calcu4"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4)/Check { test: true }/TargetInner { name: "mem_calcu4", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4/src/main.rs", Edition2024) }
-   0.088359667s  INFO prepare_target{force=false package_id=mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4) target="mem_calcu4"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4/target/debug/.fingerprint/mem_calcu4-aa9b073da7595cd3/test-bin-mem_calcu4`
+   0.014837875s  INFO prepare_target{force=false package_id=mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4) target="mem_calcu4"}: cargo::core::compiler::fingerprint: fingerprint error for mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4)/Check { test: true }/TargetInner { name: "mem_calcu4", doc: true, ..: with_path("/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4/src/main.rs", Edition2024) }
+   0.014869208s  INFO prepare_target{force=false package_id=mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4) target="mem_calcu4"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4/target/debug/.fingerprint/mem_calcu4-aa9b073da7595cd3/test-bin-mem_calcu4`
 
 Caused by:
     No such file or directory (os error 2)
@@ -51,6 +47,6 @@ Stack backtrace:
   15: std::rt::lang_start_internal
   16: _main
     Checking mem_calcu4 v0.1.0 (/Users/0xrobert/work/rust/rust-study/rust_introduction/mem_calcu4)
-error: could not compile `mem_calcu4` (bin "mem_calcu4" test) due to 6 previous errors
-warning: build failed, waiting for other jobs to finish...
 error: could not compile `mem_calcu4` (bin "mem_calcu4") due to 6 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `mem_calcu4` (bin "mem_calcu4" test) due to 6 previous errors
